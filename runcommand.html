@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div#result {
+            color: red;
+            font-size: 16px;
+            overflow: scroll;
+            max-height: 500px;
+        }
+
+        td.name.directory:hover {
+            color: blue;
+        }
+
+        table.filelist td {
+            border: solid black 1px;
+        }
+
+        div.actions {
+            width: 100%;
+            display: flex;
+        }
+
+        div.actions {
+            flex-grow: 1;
+        }
+
+        div.actions table,
+        div.actions table td.action,
+        div.actions table td.action input {
+            width: 100%;
+
+        }
+
+        div.container {
+            margin: 20px;
+        }
+    </style>
+    <script src="js/support.js"></script>
+    <title>runcommand</title>
+</head>
+
+<body>
+    <h1>Command processor</h1>
+    <div class="container">
+        <!--
+ <form action="/index2.php">
+  <label for="command">Command:</label>
+  <input type="text" id="command" name="command"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+-->
+        <div class="actions">
+            <table>
+                <tr>
+                    <td>Shell Command </td>
+                    <td class="action"> <input type="text" id="command" name="command"></td>
+                    <td class="action"> <button>Save</button> </td>
+                </tr>
+                <tr>
+                    <td>mysql Command </td>
+                    <td class="action"> <input type="text" id="sqlcommand" name="sqlcommand"></td>
+                    <td class="action"> <button>Save</button> </td>
+                </tr>
+                <tr>
+                    <td>List files</td>
+                    <td class="action"><input type="text" id="getfiles" name="getfiles"></td>
+                </tr>
+                <tr>
+                    <td><button id="phpinfo">PHPInfo</button></td>
+                </tr>
+                <tr>
+                    <td><button id="mysql_init">MYSQL Init</button></td>
+                </tr>
+                <tr>
+                    <td><button id="mysqldump">mysqldump</button></td>
+                </tr>
+            </table>
+        </div>
+        <hr />
+        <div id="status"></div>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style>
+        div#result {
+            color: red;
+            font-size: 16px;
+            overflow:scroll;
+            max-height:500px;
+        }
+
+        td.name.directory:hover {
+            color: blue;
+        }
+
+        table.filelist td {
+            border: solid black 1px;
+        }
+
+        #command {
+            width: 100%;
+        }
+    </style>
+    <script src="../js/support.js"></script>
+    <title>runcommand</title>
+</head>
+
+<body>
+    <h1>Got here</h1>
+    <!--
+ <form action="/index2.php">
+  <label for="command">Command:</label>
+  <input type="text" id="command" name="command"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+-->
+    <label for="command">Command:</label>
+    <input type="text" id="command" name="command"><br><br>
+    <label for="getfiles">List files:</label>
+    <input type="text" id="getfiles" name="getfiles"><br><br>
+    <hr />
+
+    <div id="result"></div>
+</body>
+
+</html>
